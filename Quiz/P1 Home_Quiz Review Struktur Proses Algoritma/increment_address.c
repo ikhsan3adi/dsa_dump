@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 
 void fun(char *a)
 {
-  a++;
+  a++; //! increment address, bukan value
   printf("%c", *a);
   a++;
   printf("%c", *a);
