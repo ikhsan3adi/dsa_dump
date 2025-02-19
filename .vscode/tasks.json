@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Delete all .exe file",
+      "command": "Remove-Item */**/*.exe -Recurse -Force",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "close": true,
+      },
+      "group": "none"
+    }
+  ]
+}
