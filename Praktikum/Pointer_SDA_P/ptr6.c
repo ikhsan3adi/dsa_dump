@@ -12,14 +12,21 @@ int main()
   ptgl = tgl_lahir;
 
   // printf("Nilai yang ditunjuk oleh ptgl = %d\n", *ptgl);
-  printf("Nilai dari tgl_lahir[0] = %d\n", tgl_lahir[0]);
+  // printf("Nilai dari tgl_lahir[0] = %d\n", tgl_lahir[0]);
 
-  printf("Nilai dari ptgl =");
   for (int i = 0; i < 3; i++)
   {
-    // cetak nilai dari nilai yang ditunjuk oleh ptgl
-    printf(" %d,", *(ptgl++)); // increment nilai ptgl supaya ia menunjuk
-                               // elemen selanjutnya dari tgl_lahir[]
+    // cetak nilai elemen tgl_lahir
+    printf("Nilai dari tgl_lahir[%d] = %d\n", i, tgl_lahir[i]);
+  }
+
+  for (int i = 0; i < 3; i++)
+  {
+    // cetak nilai yang ditunjuk oleh ptgl
+    printf("Nilai dari ptgl dgn alamat %p = %d\n", ptgl, *(ptgl));
+
+    ptgl++; // increment nilai ptgl supaya ia menunjuk
+            // elemen selanjutnya dari tgl_lahir[]
   }
 
   return 0;

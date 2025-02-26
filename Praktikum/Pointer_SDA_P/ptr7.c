@@ -8,7 +8,7 @@
 int main()
 {
   /* Kamus Data (deklarasi, inisialisasi nilai variabel)*/
-  // char *pkota = "BANDUNG";
+  // char *pkota_ptr = "BANDUNG";
   char pkota[] = "BANDUNG";
 
   /// Perbedaan `char *pkota = "BANDUNG";` dengan `char pkota[] = "BANDUNG";` yaitu
