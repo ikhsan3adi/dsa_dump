@@ -1,23 +1,22 @@
-/* ----------------------------------------------------------- */
-/* File Program : ptr7.c */
-/* (Pointer dan String bagian ke-1) */
-/* Deskripsi : pointer yang menunjuk ke data string */
-/* ---------------------------------------------------------- */
 #include <stdio.h>
 
 int main()
 {
-  /* Kamus Data (deklarasi, inisialisasi nilai variabel)*/
-  // char *pkota_ptr = "BANDUNG";
-  char pkota[] = "BANDUNG";
+  // Pointer
+  char *pkota = "BANDOENG";     // Menyimpan alamat string literal "BANDOENG" ke pointer pkota
+  printf("pkota: %s\n", pkota); // Menampilkan nilai string yang ditunjuk oleh pointer pkota
 
-  /// Perbedaan `char *pkota = "BANDUNG";` dengan `char pkota[] = "BANDUNG";` yaitu
-  /// array akan bersifat dinamis jika menggunakan pointer,
-  /// sedangkan jika menggunakan [] array akan bersifat statis
+  //! pkota[0] = 'C';                          //! Tidak valid karena disimpan di memori statis (read-only).
+  pkota = "JAKARTA";                           // pkota menunjuk ke string lain
+  printf("pkota setelah diubah: %s\n", pkota); // Menampilkan nilai string yang ditunjuk oleh pointer pkota
 
-  puts(pkota);
-  return 0;
+  // Array
+  char kota[] = "BANDUNG";    // Menyimpan salinan string "BANDUNG" ke dalam array karakter kota
+  printf("kota: %s\n", kota); // Menampilkan nilai string yang disalin ke array kota
+
+  // Mengubah nilai pada array
+  kota[0] = 'X';                             // Mengubah karakter pertama dari array kota (B menjadi X)
+  printf("kota setelah diubah: %s\n", kota); // Menampilkan string kota setelah karakter pertama diubah menjadi 'X'
+
+  return 0; // Mengembalikan nilai 0, menandakan program selesai
 }
-
-/* STUDI KASUS : */
-/* Apa perbedaan deklarasi variabel char *pkota='BANDUNG'; dengan char kota[]='BANDUNG' ? */
