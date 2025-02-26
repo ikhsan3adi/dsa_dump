@@ -16,29 +16,31 @@ int main()
   printf("Contoh mengisi array dinamis berukuran 0..N : \n");
   printf("N = ");
 
-  scanf("%d", &N);
+  scanf("%d", &N); // menerima input dari pengguna
 
   printf("Alokasi setelah mengetahui ukuran array \n");
 
   tab = (int *)malloc((N + 1) * sizeof(int)); // Alokasi sebesar N + 1 (karena index dimulai dari 0)
+                                              // dikali ukuran integer (4 bytes)
 
   if (tab != NULL)
   {
     for (i = 0; i <= N; i++)
     {
+      // cetak setiap nilai elemen tab
       printf("i=%d tab[i]=%d \n", i, *(tab + i));
     };
 
     printf("Akhir program \n");
 
     /* dealloc */
-    free(tab); /*dealokasi*/
+    free(tab); /* me-release/melepaskan memori  */
     return 0;
   }
-  else
+  else // jika tab bernilai NULL, berarti gagal alokasi
   {
     printf("Alokasi gagal ... \n");
-    return 1;
+    return 1; // program selesai dengan error/kesalahan
   }
   return 0;
 }

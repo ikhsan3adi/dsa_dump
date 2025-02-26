@@ -16,13 +16,14 @@ void incTab(tabint *T);  /* Increment setiap elemen tabel */
 void printTab(tabint T); /* Print tabel */
 
 int main()
-{ /* kamus */
-  tabint T;
+{
+  /* kamus */
+  tabint T; // deklarasi variabel T bertipe tabint
   int i;
 
   /* program */
-  T.tab = (int *)malloc(3 * sizeof(int));
-  T.N = 3;
+  T.tab = (int *)malloc(3 * sizeof(int)); // alokasi sebanyak 3 dikali ukuran integer untuk T.tab
+  T.N = 3;                                // beri nilai T.N dengan 3
 
   printf("Isi dan print tabel untuk indeks 1..3 \n");
 

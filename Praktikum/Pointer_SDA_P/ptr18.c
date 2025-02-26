@@ -6,13 +6,14 @@
 #include <stdio.h>
 
 /* Definisi tabel integer */
-typedef struct
+typedef struct // struktur/record bernama tabint
 {
   int tab[10]; /* array integernya */
   int N;       /* Ukuran efektif */
 } tabint;
 
 /* Prototype */
+// definisi fungsi
 void incTab(tabint *T);  /* Increment setiap elemen tabel */
 void printTab(tabint T); /* Print tabel */
 
@@ -32,20 +33,20 @@ int main()
     printf("Input tabel ke -[%d] = ", i);
     scanf("%d", &(T.tab[i]));
   };
+
   /* Print : perhatikan passing parameter by value */
-  printTab(T);
+  printTab(T); // cetak
 
   /* Increment : perhatikan passing parameter by reference */
   incTab(&T);
 
-  printTab(T);
+  printTab(T); // cetak lagi
 
   return 0;
 }
 
 /* Body prototype */
-void incTab(tabint *T)
-/* Increment setiap elemen tabel */
+void incTab(tabint *T) /* Increment setiap elemen tabel */
 {
   /* Kamus lokal */
   int i;
