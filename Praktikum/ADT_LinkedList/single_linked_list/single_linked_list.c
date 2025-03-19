@@ -95,12 +95,12 @@ bool cari_node(address p, infotype nilai)
 
   while (cursor != Nil)
   {
-    if (cursor->info == nilai)
+    if (info(cursor) == nilai)
     {
       return true;
     }
 
-    cursor = cursor->next;
+    cursor = next(cursor);
   }
 
   return false;
@@ -160,10 +160,10 @@ infotype delete_awal(address *p)
   // simpan first ke temp
   address temp = *p;
 
-  del = temp->info;
+  del = info(temp);
 
   // assign p dengan p->next
-  (*p) = (*p)->next;
+  (*p) = next(*p);
 
   // hapus
   free(temp);
@@ -179,7 +179,7 @@ infotype delete_akhir(address *p)
     return del;
   if (next(*p) == Nil)
   {
-    del = (*p)->info;
+    del = info(*p);
     free(*p);
     *p = Nil;
     return del;
@@ -192,7 +192,7 @@ infotype delete_akhir(address *p)
     temp = next(temp);
   }
   next(prev) = Nil;
-  del = temp->info;
+  del = info(temp);
   free(temp);
 
   return del;
@@ -223,7 +223,7 @@ infotype delete_tengah(address *p, int posisi)
   }
 
   next(prev) = next(temp);
-  del = temp->info;
+  del = info(temp);
   free(temp);
 
   return del;
