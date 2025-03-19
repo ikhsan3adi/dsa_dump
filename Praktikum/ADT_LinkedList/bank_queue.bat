@@ -1,0 +1,1 @@
+gcc bank_queue.c single_linked_list/single_linked_list.h single_linked_list/single_linked_list.c stack/stack.h stack/stack.c queue/queue.h queue/queue.c -o bank_queue.exe && bank_queue.exe
