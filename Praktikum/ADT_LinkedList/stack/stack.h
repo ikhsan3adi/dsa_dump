@@ -7,4 +7,6 @@ infotype pop(address *p);
 
 void push(address *p, infotype nilai);
 
+void tampil_stack(address *s);
+
 #endif
