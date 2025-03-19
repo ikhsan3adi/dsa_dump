@@ -1,0 +1,1 @@
+gcc binary_conversion.c single_linked_list/single_linked_list.h single_linked_list/single_linked_list.c stack/stack.h stack/stack.c queue/queue.h queue/queue.c -o binary_conversion.exe && binary_conversion.exe
