@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include "stack/stack.h"
 
-void desimal_ke_biner(int desimal)
+int main()
 {
+  int desimal;
   address First = Nil;
+
+  printf("\nMasukkan bilangan desimal: ");
+  scanf("%d", &desimal);
 
   if (desimal == 0)
   {
@@ -21,16 +25,6 @@ void desimal_ke_biner(int desimal)
   tampil_stack(&First);
 
   printf("\n");
-}
-
-int main()
-{
-  int desimal;
-
-  printf("Masukkan bilangan desimal: ");
-  scanf("%d", &desimal);
-
-  desimal_ke_biner(desimal);
 
   return 0;
 }
