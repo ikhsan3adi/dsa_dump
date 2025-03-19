@@ -55,7 +55,11 @@ void proses_antrian(address *queue)
     return;
   }
 
-  dequeue(queue);
+  // proses dan ambil nomor antrian dengan `dequeue`
+  infotype nomor_antrian = dequeue(queue);
+
+  printf("\nProses antrian nomor: %d", nomor_antrian);
+
   cetak_antrian(*queue);
 }
 
