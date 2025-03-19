@@ -9,4 +9,6 @@ void enqueue(address *p, infotype nilai);
 // keluarkan dari antrian
 void dequeue(address *p);
 
+void tampil_queue(address q);
+
 #endif

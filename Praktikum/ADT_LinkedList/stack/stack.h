@@ -3,7 +3,7 @@
 
 #include "../single_linked_list/single_linked_list.h"
 
-void pop(address *p);
+infotype pop(address *p);
 
 void push(address *p, infotype nilai);
 

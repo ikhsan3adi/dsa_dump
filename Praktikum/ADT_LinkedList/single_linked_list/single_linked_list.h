@@ -8,7 +8,7 @@
 #define info(P) (P)->info
 #define next(P) (P)->next
 
-typedef char infotype;
+typedef int infotype;
 
 typedef struct tElmtList *address;
 
@@ -33,8 +33,8 @@ void update_akhir(address p, infotype nilai);
 void update_tengah(address p, infotype nilai, int posisi);
 
 // delete
-void delete_awal(address *p);
-void delete_akhir(address *p);
-void delete_tengah(address *p, int posisi);
+infotype delete_awal(address *p);
+infotype delete_akhir(address *p);
+infotype delete_tengah(address *p, int posisi);
 
 #endif

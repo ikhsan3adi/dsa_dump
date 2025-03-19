@@ -147,34 +147,44 @@ void update_tengah(address p, infotype nilai, int posisi)
   }
 }
 
-void delete_awal(address *p)
+infotype delete_awal(address *p)
 {
+  infotype del;
+
   if (p == NULL)
   {
     printf("Linked list kosong!\n");
-    return;
+    return del;
   }
 
   // simpan first ke temp
   address temp = *p;
+
+  del = temp->info;
 
   // assign p dengan p->next
   (*p) = (*p)->next;
 
   // hapus
   free(temp);
+
+  return del;
 }
 
-void delete_akhir(address *p)
+infotype delete_akhir(address *p)
 {
+  infotype del;
+
   if (*p == Nil)
-    return;
+    return del;
   if (next(*p) == Nil)
   {
+    del = (*p)->info;
     free(*p);
     *p = Nil;
-    return;
+    return del;
   }
+
   address prev = Nil, temp = *p;
   while (next(temp) != Nil)
   {
@@ -182,15 +192,17 @@ void delete_akhir(address *p)
     temp = next(temp);
   }
   next(prev) = Nil;
+  del = temp->info;
   free(temp);
+
+  return del;
 }
 
-void delete_tengah(address *p, int posisi)
+infotype delete_tengah(address *p, int posisi)
 {
   if (*p == Nil || posisi <= 1)
   {
-    delete_awal(p);
-    return;
+    return delete_awal(p);
   }
 
   address prev = Nil, temp = *p;
@@ -202,12 +214,17 @@ void delete_tengah(address *p, int posisi)
     count++;
   }
 
+  infotype del;
+
   if (temp == Nil)
   {
     printf("Posisi tidak valid!\n");
-    return;
+    return del;
   }
 
   next(prev) = next(temp);
+  del = temp->info;
   free(temp);
+
+  return del;
 }
