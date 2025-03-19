@@ -6,9 +6,9 @@ void enqueue(address *p, infotype nilai)
   insert_akhir(p, nilai);
 }
 
-void dequeue(address *p)
+infotype dequeue(address *p)
 {
-  delete_awal(p);
+  return delete_awal(p);
 }
 
 void tampil_queue(address q)
@@ -17,9 +17,9 @@ void tampil_queue(address q)
   {
     printf("%d", info(q));
 
-    if (q->next != Nil)
+    if (next(q) != Nil)
     {
-      printf(" <- ");
+      printf(" - ");
     }
 
     tampil_queue(next(q));

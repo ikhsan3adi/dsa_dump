@@ -7,7 +7,7 @@
 void enqueue(address *p, infotype nilai);
 
 // keluarkan dari antrian
-void dequeue(address *p);
+infotype dequeue(address *p);
 
 void tampil_queue(address q);
 
