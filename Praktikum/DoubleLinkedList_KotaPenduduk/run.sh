@@ -1,0 +1,1 @@
+gcc main.c kota_penduduk/kota_penduduk.h kota_penduduk/kota_penduduk.c -o main.exe && ./main.exe
