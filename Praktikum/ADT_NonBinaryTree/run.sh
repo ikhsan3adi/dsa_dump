@@ -1,0 +1,1 @@
+gcc main.c nbtree/nbtree.h nbtree/nbtree.c -o main.exe && ./main.exe
